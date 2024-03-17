@@ -24,7 +24,7 @@ func req(url string) {
 		fmt.Println("\033[31m[-]\033[37m Send URLs via stdin (ex: cat js.txt | Brokenlink)")
 		os.Exit(0)
 	}
-	var secretslist = []string{"/(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?\/[a-zA-Z0-9]{2,}|((https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)|(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})?/g"}
+	var secretslist = []string{"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)","http?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"}
 
 	defer func() {
 		if r := recover(); r != nil {
@@ -73,7 +73,7 @@ func banner() {
  	| _ )_ _ ___| |_____ _ _ | (_)_ _ | |__
  	| _ \ '_/ _ \ / / -_) ' \| | | ' \| / /
  	|___/_| \___/_\_\___|_||_|_|_|_||_|_\_\
-		` + "\033[31m[\033[37mNmochea v0.1\033[31m]\n")
+	` + "\033[31m[\033[37mNmochea v0.1\033[31m]\n")
 }
 
 func main() {
