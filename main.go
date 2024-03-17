@@ -24,7 +24,7 @@ func req(url string) {
 		fmt.Println("\033[31m[-]\033[37m Send URLs via stdin (ex: cat js.txt | Brokenlink)")
 		os.Exit(0)
 	}
-	var secretslist = []string{"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)","http?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"}
+	var secretslist = []string{"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"}
 
 	defer func() {
 		if r := recover(); r != nil {
